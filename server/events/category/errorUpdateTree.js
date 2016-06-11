@@ -1,3 +1,7 @@
-/**
- * Created by khoabui on 11/06/16.
- */
+import Category from '../../models/category';
+
+export default (categoryId)=>{
+    Category.remove({_id: categoryId}, (errors, category)=>{
+        console.log(errors, category);
+    });
+}

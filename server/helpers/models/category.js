@@ -1,11 +1,5 @@
 import Category from '../../models/category';
 import shortid from 'shortid';
-const checkCategoryChild = (childrenArray, next)=>{
-    childrenArray.each(() => {
-        
-    })
-}
-
 
 const generateURL = (parentId, name) => {
     if(parentId === null || parentId === undefined || parentId === ''){
@@ -21,7 +15,6 @@ const generateURL = (parentId, name) => {
             });
         })
     }
-
 }
 
 export { generateURL };

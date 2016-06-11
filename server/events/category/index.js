@@ -1,6 +1,7 @@
 import EventEmitter from 'events';
 import updateTree from './updateTree';
 import updateParent from './updateParent';
+import errorUpdateTree from './errorUpdateTree';
 
 class CategoryEvent extends EventEmitter{}
 
@@ -13,6 +14,8 @@ categoryEvent.on('new category', (category)=>{
     }
     updateTree(category);
 });
+
+categoryEvent.on('error update tree', errorUpdateTree);
 
 export default categoryEvent;
 

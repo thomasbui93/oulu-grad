@@ -2,8 +2,8 @@
  * Created by khoabui on 05/06/16.
  */
 import Configuration from '../../models/config';
-import Category from '../../models/category';
-import {settingConvention} from '../../config/setting';
+import categoryEvents from './index';
+
 
 const traverseTreeAppend = (tree, category)=> {
     return tree.map((treeNode)=> {
@@ -55,7 +55,7 @@ export default (category) => {
                 categoryTree = traverseTreeAppend(categoryTree, category);
             }
             Configuration.update({_id: categoryTreeBlock._id}, {data: categoryTree}, (errors, categoryTree)=> {
-                console.log('errors', errors);
+                if(errors) categoryEvents.emit('error update tree', category._id);
             });
         }
 
