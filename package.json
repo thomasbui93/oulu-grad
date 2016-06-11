@@ -1,0 +1,33 @@
+{
+  "name": "oulu-grad",
+  "version": "0.0.1",
+  "description": "A simple platform for ecommerce with NodeJS, MongoDB and React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/index.js --exec babel-node --presets es2015 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thomasbui93/oulu-grad.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasbui93/oulu-grad/issues"
+  },
+  "homepage": "https://github.com/thomasbui93/oulu-grad#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "compression": "^1.6.2",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.19",
+    "mongoose-unique-validator": "^1.0.2",
+    "node-uuid": "^1.4.7",
+    "shortid": "^2.2.6"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "nodemon": "^1.9.2"
+  }
+}
